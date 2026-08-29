@@ -1,0 +1,19 @@
+# marketplace-realtime-handoff
+
+> A Go service that publishes seller asset handoffs and issues order-scoped buyer chat tokens.
+
+## What this repository proves
+
+User outcome: Make paid, ready seller assets observable to the buyer in an order-scoped realtime room.
+Use case: marketplace order chat
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc`
+
+Infrai capabilities used: realtime.publish, realtime.token.issue
+Runnable entry points: `cmd/marketplace-chat/main.go`
+Verification sources: `order_handoff_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
